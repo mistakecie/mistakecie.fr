@@ -271,3 +271,63 @@ section a::after {
     grid-column: 1;
   }
 }
+/* HERO COMPOSITION V2 */
+
+.hero {
+  position: relative;
+  min-height: 82vh;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 45px;
+  overflow: hidden;
+}
+
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  max-width: 280px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.45));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner {
+  max-width: 700px;
+  transform: rotate(-1deg);
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.5));
+}
+
+.hero-text {
+  margin-top: 24px;
+  padding-left: 18px;
+  border-left: 2px solid var(--rust);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(166, 64, 39, 0.06);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-logo {
+    max-width: 175px;
+  }
+
+  .hero-banner {
+    max-width: 100%;
