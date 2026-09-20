@@ -252,11 +252,14 @@ section a::after {
   .hero-text {
     margin-top: 20px;
   }
-}
+
 /* CONTENT GRID FIX */
-}
+
 .section-links {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .section-links a {
