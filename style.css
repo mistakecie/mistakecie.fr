@@ -185,3 +185,71 @@ section a::after {
     font-size: clamp(1.7rem, 8vw, 2.6rem);
   }
 }
+/* BRAND HERO */
+
+.hero {
+  min-height: 72vh;
+
+  display: grid;
+  grid-template-columns: minmax(180px, 320px) 1fr;
+  align-items: center;
+  gap: 70px;
+
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 32px;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-banner {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  margin-top: 28px;
+}
+
+.hero-text p {
+  margin: 4px 0;
+  color: var(--grey);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 45px 22px 55px;
+  }
+
+  .hero-logo {
+    max-width: 190px;
+  }
+
+  .hero-banner {
+    max-width: 100%;
+  }
+
+  .hero-text {
+    margin-top: 20px;
+  }
+}
