@@ -627,68 +627,93 @@ main > section h2 {
 }
 /* MEDIA / VIDEO */
 
+/* MEDIA / VIDEO */
+
+.media > h2 {
+  color: var(--cream-light);
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
 .media-content {
   grid-column: 2;
 
   display: grid;
-  gap: 36px;
+  grid-template-columns: minmax(300px, 430px) minmax(240px, 1fr);
+  gap: 48px;
+
+  align-items: start;
+  max-width: 900px;
 }
 
+/* VIDEO */
+
 .media-video {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .media-video video {
   display: block;
+
   width: 100%;
-  max-width: 720px;
+  max-width: 430px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
 
   border: 1px solid var(--border);
   background: var(--black-soft);
 
   box-shadow:
-    0 18px 50px rgba(0, 0, 0, 0.28);
+    0 14px 40px rgba(0, 0, 0, 0.35);
 }
 
 .media-video-info {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px 18px;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .media-video-info strong {
   color: var(--cream-light);
 
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .media-video-info span {
   color: var(--grey);
-  font-size: 0.9rem;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
+/* DOSSIER DE DIFFUSION */
+
 .media-dossier {
-  max-width: 720px;
+  padding-left: 32px;
 
-  padding-top: 30px;
-
-  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
 }
 
 .media-dossier .media-lead {
-  margin-bottom: 14px;
+  margin: 0 0 18px;
 
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  color: var(--cream-light);
+
+  font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+
+  letter-spacing: -0.02em;
 }
 
 .media-dossier > p:not(.media-lead) {
-  max-width: 620px;
-
-  margin: 0 0 28px;
+  margin: 0 0 30px;
 
   color: var(--grey);
 
@@ -696,17 +721,55 @@ main > section h2 {
   line-height: 1.7;
 }
 
+.media-download {
+  display: inline-block;
+
+  padding: 13px 18px;
+
+  border: 1px solid var(--cream);
+
+  color: var(--cream-light);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.media-download:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+/* MOBILE */
+
 @media (max-width: 700px) {
+
   .media-content {
     grid-column: 1;
-  }
 
-  .media-video-info {
-    flex-direction: column;
-    gap: 4px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+
+    max-width: 100%;
   }
 
   .media-video video {
+    max-width: 100%;
+  }
+
+  .media-dossier {
+    padding-top: 28px;
+    padding-left: 0;
+
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .media-download {
     width: 100%;
+    text-align: center;
   }
 }
