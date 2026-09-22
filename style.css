@@ -235,8 +235,6 @@ section a::after {
   max-width: 100%;
   height: auto;
 
-  clip-path: circle(44% at 50% 50%);
-
   filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
 }
 
