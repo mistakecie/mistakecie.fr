@@ -773,3 +773,128 @@ max-width: 340px;
     text-align: center;
   }
 }
+/* ==================================================
+   DESKTOP NORMALISATION
+   ================================================== */
+
+@media (min-width: 900px) {
+
+  main {
+    max-width: 1100px !important;
+    padding: 30px 24px 80px !important;
+  }
+
+  main > section {
+    grid-template-columns: 150px minmax(0, 1fr) !important;
+    gap: 34px !important;
+
+    padding: 44px 0 !important;
+  }
+
+  main > section > h2 {
+    font-size: 0.95rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+
+  /* À PROPOS */
+
+  .about-content {
+    max-width: 720px !important;
+  }
+
+  .about-content .about-lead {
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .about-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+
+  /* SUR SCÈNE */
+
+  .live-content {
+    max-width: 720px !important;
+  }
+
+  .live-lead {
+    font-size: 1.55rem !important;
+  }
+
+  .live-content > p:not(.live-lead) {
+    font-size: 1rem !important;
+  }
+
+  .live-content > a {
+    font-size: 1.9rem !important;
+    line-height: 1.15 !important;
+
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+
+  /* MÉDIAS */
+
+  .media-content {
+    display: grid !important;
+
+    grid-template-columns: 320px minmax(0, 1fr) !important;
+    gap: 36px !important;
+
+    max-width: 780px !important;
+  }
+
+  .media-video {
+    width: 320px !important;
+  }
+
+  .media-video video {
+    width: 320px !important;
+    max-width: 320px !important;
+    height: 320px !important;
+
+    object-fit: cover !important;
+  }
+
+  .media-video-info strong {
+    font-size: 0.95rem !important;
+  }
+
+  .media-video-info span {
+    font-size: 0.85rem !important;
+  }
+
+  .media-dossier {
+    padding-left: 26px !important;
+  }
+
+  .media-dossier .media-lead {
+    font-size: 1.6rem !important;
+  }
+
+  .media-dossier > p:not(.media-lead) {
+    font-size: 0.95rem !important;
+  }
+
+
+  /* MUSIQUE + RÉSEAUX */
+
+  .section-links a {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+
+    margin-bottom: 18px !important;
+  }
+
+
+  /* CONTACT FINAL */
+
+  #contact > a {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+}
