@@ -1035,3 +1035,117 @@ max-width: 340px;
     background: rgba(217, 198, 160, 0.04);
   }
 }
+/* ==================================================
+   MUSIQUE / SOUNDCLOUD
+   ================================================== */
+
+.music-content {
+  grid-column: 2;
+  max-width: 760px;
+}
+
+.music-lead {
+  margin: 0 0 10px;
+
+  color: var(--cream-light);
+
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+
+  letter-spacing: -0.02em;
+}
+
+.music-intro {
+  margin: 0 0 28px;
+
+  color: var(--grey);
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* LECTEUR */
+
+.soundcloud-player {
+  width: 100%;
+  max-width: 720px;
+
+  margin-bottom: 26px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  background: var(--black-soft);
+
+  box-shadow:
+    0 14px 38px rgba(0, 0, 0, 0.25);
+}
+
+.soundcloud-player iframe {
+  display: block;
+
+  width: 100%;
+  height: 300px;
+
+  border: 0;
+}
+
+/* LIENS */
+
+.music-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.music-links a {
+  display: inline-block;
+
+  padding: 11px 16px;
+
+  border: 1px solid var(--cream);
+
+  color: var(--cream-light);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.music-links a:hover {
+  background: var(--cream);
+  color: var(--black);
+  border-color: var(--cream);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .music-content {
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  .soundcloud-player iframe {
+    height: 280px;
+  }
+
+  .music-links {
+    flex-direction: column;
+  }
+
+  .music-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
