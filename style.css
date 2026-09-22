@@ -211,10 +211,10 @@ section a::after {
   width: 100%;
   max-width: 1100px;
 
-  min-height: 62vh;
+  min-height: 54vh;
 
   margin: 0 auto;
-  padding: 58px 24px 64px;
+  padding: 48px 24px 52px;
 
   display: grid;
   grid-template-columns: 210px minmax(0, 650px);
